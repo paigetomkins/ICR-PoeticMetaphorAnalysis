@@ -11,21 +11,8 @@ nlp = spacy.load("en_core_web_sm")
 
 doc = nlp(chapter1)
 sentences = list(doc.sents)
-sentence = (sentences[1])
-#print(sentence)
-ents = list(doc.ents) #looks for all instances of named entities in a text
-print(ents[0].label)
-print(ents[0].label_)
-print(ents[0].text)
+sentence = (sentences[2])
 
-people = []
+print(list(doc.noun_chunks))
 
-for ent in ents:
-    if ent.label_ == "PERSON":
-        people.append(ent)
-print (people)
-
-
-#for token in sentence:
- #   print (token.text, token.pos_)
     
