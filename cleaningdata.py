@@ -1,4 +1,5 @@
 import spacy
+import textacy 
 
 with open("/home/paige-tomkins/Downloads/alice.txt", "r") as f:
     text = f.read().replace("\n\n", " ") #allows smaller spacy model to better separate sentences
@@ -13,6 +14,10 @@ doc = nlp(chapter1)
 sentences = list(doc.sents)
 sentence = (sentences[2])
 
-print(list(doc.noun_chunks))
+patterns = [[{"POS": "NOUN"}, {"POS": "VERB"}, {"POS": "PRON"}], [{"POS": "PRON"}, {"POS": "VERB"}]]
 
-    
+verb_phrases = textacy.extract.matches.token_matches(doc, patterns=patterns)
+
+for verb_phrase in verb_phrases:
+    print (verb_phrase)
+
