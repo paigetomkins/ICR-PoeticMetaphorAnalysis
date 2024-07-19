@@ -1,5 +1,5 @@
 import spacy
-import textacy 
+from spacy import displacy
 
 with open("/home/paige-tomkins/Downloads/alice.txt", "r") as f:
     text = f.read().replace("\n\n", " ") #allows smaller spacy model to better separate sentences
@@ -10,14 +10,11 @@ chapter1 = chapters[0]
 
 nlp = spacy.load("en_core_web_sm")
 
-doc = nlp(chapter1)
+doc = nlp(text)
 sentences = list(doc.sents)
-sentence = (sentences[2])
+sentence = (sentences[8])
 
-patterns = [[{"POS": "NOUN"}, {"POS": "VERB"}, {"POS": "PRON"}], [{"POS": "PRON"}, {"POS": "VERB"}]]
+html = displacy.render(doc, style="ent")
 
-verb_phrases = textacy.extract.matches.token_matches(doc, patterns=patterns)
-
-for verb_phrase in verb_phrases:
-    print (verb_phrase)
-
+with open ("data_vis.html", "w") as f:
+    f.write(html)
