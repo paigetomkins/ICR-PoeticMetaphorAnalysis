@@ -13,8 +13,11 @@ In the words of Aurelie Herbelot (2015), poetry is not a typical focus of lingui
 
 ##"Background":
 The broader topic of my project--computational linguistics--can essentially be defined as the use of computers to study and expand the field of linguistics. While linguistics is an incredibly broad field involving a variety of methods and branches, the field I am focusing on in my project is semantics, which is the study of meaning. Semantics itself also has a variety of varying sub-branches, views, and methods used to study it. A few common methods of analysis used in semantics include: 
+
 ~Tagging: The process of marking the words in a corpus with their corresponding part of speech. Tagging was first used on a serious corpus with the Brown Corpus, the first major structured corpus of English literature, first developed in the 1960s by Henry Kucera and W. Nelson Francis at Brown University. Since then, multiple different kinds of supervised and unsupervised tagging models have been developed. The most common type of POS tagging today is likely the Penn tag set developed in the Penn-Treebank project, and is the tagging system used by the YCOEP corpus. 
+
 ~Parsing: A method of semantic analysis which enables one to gain a better understanding of a text by breaking it down into different syntactic parts and associations. 
+
 ~Word embedding, which is the process of transforming the words that are more easily understood by humans into numerical vectors that are more easily understood by computers. 
 The idea for my project is primarily based on previous models that attempted to identify metaphor not only through vectors and machine learning, but also through methods like visual representation, text annotation, and more (Shutova et al, 2016; Kesarwani, 2018). My project is essentially a simplified version of previous related works, removing visual representation and manual corpus annotation in favor of a simpler approach.
 
@@ -27,11 +30,11 @@ I have also selected the Kaggle open-source dataset "Poems from poetryfoundation
 
 ###2. Sorting the corpus
 
-When downloading the corpus, it should be noted that although the files were originally given the extension .psd, none of them are Photoshop documents and as such could not be opened by image editing software; rather, the file extensions had to be manually changed to that of a text file. I selected .txt as my file extension of choice since the files used ASCII text, although .mv and similar text formats also enabled the files to open. For now, I am including all poetry together as a single corpus, rather than sorting by period, region, genre, etc., although it should be noted that all of the poems in use were written in Old English.
+When downloading the corpus, it should be noted that although the files were originally given the extension .psd, none of them are Photoshop documents and as such could not be opened by image editing software; rather, the file extensions had to be manually changed to that of a text file. I selected .txt as my file extension of choice since the files used ASCII text, although .mv and similar text formats also enabled the files to open. For now, I am including all poetry together as a single corpus, rather than sorting by period, region, genre, etc., although it should be noted that all of the poems in use were written in English or Old English.
 
 ###2. Extracting and isolating metaphors based on POS tag sequences and dependency parsers
 
-I am using the approach taken by Neuman (2013) and Kesarwani (2018, p.70). rather than annotating poetry line by line in order to identify metaphor, I chose to use the various POS tag sequences described by Kesarwani to automatically extract the majority of metaphorical phrases and sentences from the corpus. This is an important step towards extracting all of the metaphors used in the corpus, and relies on simple, rule-based directions, making it a relatively fast and efficient process. Then, in line with Kesarwani (2018) and Shutova (2016), I use a dependency parser--in my case, SpaCy--in order to identify the various associations and connections (e.g., nsubj, dobj, etc.) within the tagged sentences, and remove the sentences that do not feature metaphors. As Kesarwani pointed out, however, POS tagging can sometimes result in incomprehensible word pairs; in the event of this happening, I plan to use the Berkeley Neural Parser (integrated in SpaCy) in order to identify the surrounding context. My choice to use SpaCy rather than the Stanford Parser and Dependency Parser chosen by Kesarwani is due to the fact that SpaCy is both open-source, an important aspect of the project, and pre-trained, significantly reducing the time and cost of this step. Additionally, SpaCy operates much faster than Stanford GloVe, which is my primary reason for choosing SpaCy. 
+I am using the approach taken by Neuman (2013) and Kesarwani (2018, p.70). Rather than annotating poetry line by line in order to identify metaphor, I chose to use the various POS tag sequences described by Kesarwani to automatically extract the majority of metaphorical phrases and sentences from the corpus. This is an important step towards extracting all of the metaphors used in the corpus, and relies on simple, rule-based directions, making it a relatively fast and efficient process. Then, in line with Kesarwani (2018) and Shutova (2016), I use a dependency parser--in my case, SpaCy--in order to identify the various associations and connections (e.g., nsubj, dobj, etc.) within the tagged sentences, and remove the sentences that do not feature metaphors. As Kesarwani pointed out, however, POS tagging can sometimes result in incomprehensible word pairs; in the event of this happening, I plan to use the Berkeley Neural Parser (integrated in SpaCy) in order to identify the surrounding context. My choice to use SpaCy rather than the Stanford Parser and Dependency Parser chosen by Kesarwani is due to the fact that SpaCy is both open-source, an important aspect of the project, and pre-trained, significantly reducing the time and cost of this step. Additionally, SpaCy is known to operate much faster than Stanford GloVe, which is my primary reason for choosing it. 
 
 ###3. Create high-dimensional vectors using word embeddings
 
@@ -44,9 +47,10 @@ Although I understand the purpose of this step, the implementation of it relies 
 
 ###5. Use a pre-trained statistical-based machine learning model and cosine similarity to further detect metaphor in the selected sentences
 
-Before calculating the cosine similarity, I first needed to create a threshold at which a phrase is considered a metaphor; I plan to do this in a similar way to how Shutova (2016) did it in their research. I plan to use a small collection of phrases that have been manually annotated for whether they are metaphorical or literal, and then calculate the cosine similarity between the two parts of the metaphor (e.g., two nouns, a noun and a verb, etc.). By averaging those numbers, it is possible to create a threshold for what cosine value would classify a certain phrase as a metaphor, and thus discard the phrases that exceeded that threshold as likely being literal. For the manually annotated datasets, I am planning to use the dataset created by Mohammed et al (2016), in which verb-noun pairs were gathered from WordNet, a large database of English words maintain9xed by Princeton University, and annotated for metaphoricity by annotators from a crowdsourcing platform. Only the tagged pairs that reached 70% or higher agreement across annotators were used in the final set. I also plan to use the Tsvetkov et al (2014) dataset of noun-adjective pairs . I chose both of these datasets because they each look at different word pairs (noun-adjective vs noun-verb), they include literal phrases in addition to metaphorical ones, and because they focus simply on annotating and identifying metaphors rather than interpreting them like other researchers (Zayed et al, 2020). 
+Before calculating the cosine similarity, I first need to create a threshold at which a phrase is considered a metaphor; I plan to do this in a similar way to how Shutova (2016) did it in their research. I plan to use a small collection of phrases that have been manually annotated for whether they are metaphorical or literal, and then calculate the cosine similarity between the two parts of the metaphor (e.g., two nouns, a noun and a verb, etc.). By averaging those numbers, it is possible to create a threshold for what cosine value would classify a certain phrase as a metaphor, and thus discard the phrases that exceeded that threshold as likely being literal. For the manually annotated datasets, I am planning to use the dataset created by Mohammed et al (2016), in which verb-noun pairs were gathered from WordNet, a large database of English words maintained by Princeton University, and annotated for metaphoricity by annotators from a crowdsourcing platform. Only the tagged pairs that reached 70% or higher agreement across annotators were used in the final set. I also plan to use the Tsvetkov et al (2014) dataset of noun-adjective pairs . I chose both of these datasets because they each look at different word pairs (noun-adjective vs noun-verb), they include literal phrases in addition to metaphorical ones, and because they focus simply on annotating and identifying metaphors rather than interpreting them like other researchers (Zayed et al, 2020). 
 
 ###6. Generating a plot
+
 Finally, after using the various aforementioned methods to find the metaphors in the poetry corpus, I plan to generate a plot comparing the different numbers of metaphors found across different time periods (or whatever the final variables are). The X-axis will be a measure across time, presumably measured in decades; the Y-axis will be a measure of the number of metaphors present in the poems of that year within the corpus. I plan to use matplotlib in Python to create my plot; Seaborn was another option, but I opted for matplotlib since it works particularly well for basic visualizations like the one I will be making and is more compatible with the other libraries I am familiar with (Sial et al, 2021).
 
 ##"Results":
@@ -56,16 +60,27 @@ Finally, after using the various aforementioned methods to find the metaphors in
 ##Sources used* (alphabetized): Author's Name. Title of paper. Relevance (or lack thereof).
 
 Feng, Y. and Lapata, M. (2010). Visual information in semantic representation. Relevant.
+
 Herbelot, A. (2014). The semantics of poetry: a distributional reading. Relevant.
+
 Hermann, K. and Blunsom, P. (2014). Multilingual models for compositional distributed semantics. Fairly relevant but complicated.
+
 Jones, M. and Mewhort, D. (2007). Representing word meaning and order information in a composite holographic lexicon. Relevant.
+
 Kerarwari, V. (2018). Automatic poetry classification using natural language processing. Very relevant.
+
 Mohammed et al (2016). Metaphor as a medium for emotion: An empirical study. Relevant.
+
 Musaoglu et al (2017). Generic tool for visualizing patterns in poetry. Semi-relevant.
+
 Plamodon, M. (2009). Poetic waveforms, discrete fourier transform analysis of phonemic accumulations, and love in the garden of Tennyson's Maud. Not relevant.
+
 Shutova et al (2016). Black holes and white rabbits: Metaphor identification with visual features. Very relevant.
+
 Sial et al (2021). Comparative analysis of data visualization libraries matplotlib and seaborn in python. Relevant. 
-Zayed et al (2020). Figure me out: A gold standard dataset for metaphor interpretation. Not very relevant. 
+
+Zayed et al (2020). Figure me out: A gold standard dataset for metaphor interpretation. Not very relevant.
+
 Zou et al (2013). Bilingual word embeddings for phrase-based machine translation. Not very relevant.
 
 *I also used various articles and blog posts to quickly understand certain concepts, but most of them are not credible enough to cite and were not read in full.
