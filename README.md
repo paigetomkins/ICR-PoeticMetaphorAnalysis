@@ -40,7 +40,7 @@ Fasttext uses, like its alternative word2vec, a skip-gram model, but unlike word
 
 ###4. Rule-based metaphor detection?
 
-Although I understand the purpose of this step, I'm unsure of how necessary it is. How much extra time would it add to my research (and how much would I gain from this step)?
+Although I understand the purpose of this step, the implementation of it relies on my time management, and whether I am able to complete the previous steps quickly.
 
 ###5. Use a pre-trained statistical-based machine learning model and cosine similarity to further detect metaphor in the selected sentences
 
