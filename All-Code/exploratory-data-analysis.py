@@ -17,8 +17,8 @@ plt.show()
 """
 
 #Author Distribution
-ax = df['author'].value_counts().plot(kind='bar', title='Authorship Distribution')
+ax = df['type'].value_counts().plot(kind='bar', title='Thematic Distribution')
 
-ax.set_xlabel('Author Name')
+ax.set_xlabel('Theme')
 ax.set_ylabel('Number of Poems')
 plt.show()
