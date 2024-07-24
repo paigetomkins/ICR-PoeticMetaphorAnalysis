@@ -2,7 +2,8 @@
 
 ## Installing and Implementing my Code
 
-1. Setting up the repository
+###1. Setting up the repository
+
 In your terminal, type or copy-paste:
 ```
 git clone https://github.com/paigetomkins/ICR-PoeticMetaphorAnalysis.git
