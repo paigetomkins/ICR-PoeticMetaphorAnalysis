@@ -4,7 +4,7 @@
 
 1. Clone the repo:
 
-$ (pt-venv) paige-tomkins@paige-tomkins-asus:~/ICR-linguistics$ git clone
+    $ (pt-venv) paige-tomkins@paige-tomkins-asus:~/ICR-linguistics$ git clone
 
 
 
