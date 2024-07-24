@@ -7,7 +7,7 @@ pd.options.display.max_columns = 6
 
 df = pd.read_csv('/home/paige-tomkins/ICR-linguistics/fulldataset.csv')
 
-#Age Distribution
+#Distributions
 """
 ax = df['age'].value_counts().plot(kind='bar', title='Age Distribution')
 
@@ -16,9 +16,7 @@ ax.set_ylabel('Number of Poems Included')
 plt.show()
 """
 
-#Author Distribution
-ax = df['type'].value_counts().plot(kind='bar', title='Thematic Distribution')
+#Correlation
+correlation = df[['author', 'age']].corr()
+print(correlation)
 
-ax.set_xlabel('Theme')
-ax.set_ylabel('Number of Poems')
-plt.show()
