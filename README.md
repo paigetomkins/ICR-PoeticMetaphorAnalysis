@@ -1,11 +1,14 @@
 # Moment, Meaning, and Metaphor: A computational comparison of metaphor use and semantic evolution between modern and Renaissance English poetry across the themes of love, nature, and mythology
 
-(for a guide on implementing my code(s), see the "Methodology" section.)
+## Installing and Implementing my Code
 
-1. Clone the repo:
+1. Setting up the repository
+In your terminal, type or copy-paste:
 ```
-    $ (pt-venv) paige-tomkins@paige-tomkins-asus:~/ICR-linguistics$ git clone
+git clone https://github.com/paigetomkins/ICR-PoeticMetaphorAnalysis.git
 ```
+and press Enter. You should now have a local clone of this repository.
+
 
 
 ## Working research question: 
