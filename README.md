@@ -1,4 +1,4 @@
-# ICR-linguistics
+# Moment, Meaning, and Metaphor: A computational comparison of metaphor use and semantic evolution between modern and Renaissance English poetry across the themes of love, nature, and mythology
 
 (for a guide on implementing my code(s), see the "Methodology" section.)
 
@@ -59,7 +59,8 @@ Finally, after using the various aforementioned methods to find the metaphors in
 ...
 
 
-## Sources used* (alphabetized): Author's Name. Title of paper. Relevance (or lack thereof).
+## Sources used* (alphabetized): 
+# Author's Name. Title of paper. Relevance (or lack thereof).
 
 Feng, Y. and Lapata, M. (2010). Visual information in semantic representation. Relevant.
 
