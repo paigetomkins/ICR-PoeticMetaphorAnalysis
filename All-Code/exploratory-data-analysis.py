@@ -5,12 +5,20 @@ import seaborn as sns
 plt.style.use('ggplot')
 pd.options.display.max_columns = 6
 
-df = pd.read_csv('/home/paige-tomkins/ICR-linguistics/all.csv')
+df = pd.read_csv('/home/paige-tomkins/ICR-linguistics/fulldataset.csv')
 
-df = df[['author', 'age']].copy() 
+#Age Distribution
+"""
 ax = df['age'].value_counts().plot(kind='bar', title='Age Distribution')
 
 ax.set_xlabel('Age')
 ax.set_ylabel('Number of Poems Included')
 plt.show()
+"""
 
+#Author Distribution
+ax = df['author'].value_counts().plot(kind='bar', title='Authorship Distribution')
+
+ax.set_xlabel('Author Name')
+ax.set_ylabel('Number of Poems')
+plt.show()
