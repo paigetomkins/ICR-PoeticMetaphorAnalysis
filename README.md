@@ -40,9 +40,8 @@ For my dataset, I have selected the Kaggle open-source dataset "Poems from poetr
 
 ![Age Distribution Graph](All-Code/AgeDistribution.png)
 
-![Authorship Distribution Graph](All-Code/AuthorshipDistribution.png)
+![Authorship Distribution Graph](ICR-PoeticMetaphorAnalysis/All-Code/AuthorshipDistribution.png)
 
-![Thematic Distribution Graph](All-Code/ThematicDistribution.png)
 
 ### 2. Importing and Processing the corpus
 
