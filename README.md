@@ -2,6 +2,11 @@
 
 (for a guide on implementing my code(s), see the "Methodology" section.)
 
+1. Clone the repo:
+(pt-venv) paige-tomkins@paige-tomkins-asus:~/ICR-linguistics$ git clone
+
+
+
 ## Working research question: 
 Between Old English and modern poetry, in what ways has the use of metaphor in poetry changed over time, and how can these changes be quantified and modeled by a computer program?
 
@@ -55,12 +60,15 @@ Before calculating the cosine similarity, I first need to create a threshold at 
 
 Finally, after using the various aforementioned methods to find the metaphors in the poetry corpus, I plan to generate a plot comparing the different numbers of metaphors found across different time periods (or whatever the final variables are). The X-axis will be a measure across time, presumably measured in decades; the Y-axis will be a measure of the number of metaphors present in the poems of that year within the corpus. I plan to use matplotlib in Python to create my plot; Seaborn was another option, but I opted for matplotlib since it works particularly well for basic visualizations like the one I will be making and is more compatible with the other libraries I am familiar with (Sial et al, 2021).
 
+## Licensing and Usage:
+I have used exclusively open-source software and materials to conduct my research; as such, all of my code, in addition to my paper and other associated files are open for public use, replication, and modification.
+
 ## "Results":
 ...
 
 
 ## Sources used* (alphabetized): 
-# Author's Name. Title of paper. Relevance (or lack thereof).
+### Author's Name. Title of paper. Relevance (or lack thereof).
 
 Feng, Y. and Lapata, M. (2010). Visual information in semantic representation. Relevant.
 
