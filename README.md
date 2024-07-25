@@ -71,11 +71,11 @@ After changing that line to match your computer's path to opening the dataset fi
 /PoeticMetaphorAnalysis/All-Code$ python3 exploratory-data-analysis.py
 ```
 
-This should print out some basic statistics related to the dataset (e.g., number of missing values, number of duplicate values, etc.) and offer you three graphs: One visualizing the authorship distribution, one for the thematic distribution, and one for the time period distribution. If the graphs look different than mine (featured below in Part 1 of the Methodology section), ensure that you have downloaded the same dataset as me and that you did not edit other lines of code.
+This should print out some basic statistics related to the dataset (e.g., number of missing values, number of duplicate values, etc.) and offer you three graphs: One visualizing the authorship distribution, one for the thematic distribution, and one for the time period distribution. If the graphs look different than mine (featured below in Part 1 of the Methodology section), ensure that you have downloaded the same dataset as me and that you did not edit other lines of code in the file.
 
 ### 5. Metaphor Extraction
 
-This code is located under
+This code is a work in progess. This step will be updated immediately after the code is functional and pushed to the repository.
 
 ## Working research question: 
 Between Renaissance and modern poetry, in what ways has the use of metaphor in poetry changed over time, and how can these changes be quantified and modeled by a computer program?
