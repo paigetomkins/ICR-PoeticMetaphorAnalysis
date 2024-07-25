@@ -63,7 +63,7 @@ The above command will simply open the file in a generic text editor, but if you
 
 The path to the dataset file is specified in Line 6:
 
-[path to dataset photo](Screenshots/PathToDatasetFile.png)
+![path to dataset photo](Screenshots/PathToDatasetFile.png)
 
 After changing that line to match your computer's path to opening the dataset file, you can save the file and then run the code in the All-Code folder of the repo:
 
