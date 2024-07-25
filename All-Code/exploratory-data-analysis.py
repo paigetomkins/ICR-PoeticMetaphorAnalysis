@@ -5,7 +5,7 @@ import seaborn as sns
 plt.style.use('ggplot')
 pd.options.display.max_columns = 6
 
-df = pd.read_csv('/home/paige-tomkins/ICR-linguistics/fulldataset.csv')
+df = pd.read_csv('/home/paige-tomkins/PoeticMetaphorAnalysis/fulldataset.csv')
 
 #Distributions
 """

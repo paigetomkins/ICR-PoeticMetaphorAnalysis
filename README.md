@@ -45,10 +45,35 @@ From there, you can run the Python program import-data-as-dictlist.py:
 /PoeticMetaphorAnalysis/All-Code$ python3 import-data-as-dictlist.py
 ```
 
-Alternatively, you can copy the code for this step, titled [import-data-as-dictlist.py](https://github.com/paigetomkins/PoeticMetaphorAnalysis/blob/main/All-Code/import-data-as-dictlist.py), under the All-Code folder of the repository. By clicking the Copy button (located on the left of the Download button pictured in the previous step), you have created a copy of the code that can then be pasted into Emacs or a similar text editor and run in the terminal.
+Alternatively, you can copy the code for this step, titled [import-data-as-dictlist.py](https://github.com/paigetomkins/PoeticMetaphorAnalysis/blob/main/All-Code/import-data-as-dictlist.py), under the All-Code folder of the repository. By clicking the Copy button (located on the left of the Download button pictured in the previous step), you have created a copy of the code that can then be pasted into Emacs or a similar text editor and run in the terminal under the All-Code section of the repo.
 
-### 4. 
+### 4. Run Exploratory Data Analysis on the File
 
+This step will allow you to run some checks on the dataset to ensure its reliability and functionality, and also generate some graphs to visualize the various distributions present in the data.
+
+If you followed the above steps correctly, you should be in the All-Code folder of the repo in your terminal (if not, please reference the steps above to navigate there). To run the Python file, type:
+
+```
+/PoeticMetaphorAnalysis/All-Code$ open exploratory-data-analysis.py
+```
+
+#### Important: You need to edit the file before running it in order to specify the unique path taken by your computer to access the dataset file. The above command will simply open the file in a generic text editor, but if you want to open it in Emacs or something similar, that also works.
+
+The path to the dataset file is specified in Line 6:
+
+[path to dataset photo](PathToDatasetFile.png)
+
+After changing that line to match your computer's path to opening the dataset file, you can save the file and then run the code in the All-Code folder of the repo:
+
+```
+/PoeticMetaphorAnalysis/All-Code$ python3 exploratory-data-analysis.py
+```
+
+This should print out some basic statistics related to the dataset (e.g., number of missing values, number of duplicate values, etc.) and offer you three graphs: One visualizing the authorship distribution, one for the thematic distribution, and one for the time period distribution. If the graphs look different than mine (featured below in Part 1 of the Methodology section), ensure that you have downloaded the same dataset as me and that you did not edit other lines of code.
+
+### 5. Metaphor Extraction
+
+This code is located under
 
 ## Working research question: 
 Between Renaissance and modern poetry, in what ways has the use of metaphor in poetry changed over time, and how can these changes be quantified and modeled by a computer program?
