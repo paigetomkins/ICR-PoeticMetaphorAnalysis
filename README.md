@@ -13,7 +13,10 @@ and press Enter. You should now have a local clone of this repository.
 ### 2. Importing the Dataset
 
 The full dataset for my project can be found in this repository under "fulldataset.csv." Upon opening that file, there should be an option to download the raw file if you click on the arrow button on the right-hand side as seen below.
+
+
 ![File Picture](DownloadRawFile.png)
+
 The file is about 590 kBs; ensure that you have the space available to complete the download.
 
 If, for whatever reason, these steps do not work for you, you can find the original dataset at [https://www.kaggle.com/datasets/ultrajack/modern-renaissance-poetry/data](https://www.kaggle.com/datasets/ultrajack/modern-renaissance-poetry/data). However, please note that it may have been altered and thus prevent you from getting the same results as me. 
