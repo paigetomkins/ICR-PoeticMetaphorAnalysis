@@ -23,9 +23,31 @@ If, for whatever reason, these steps do not work for you, you can find the origi
 
 ### 3. Arranging the Dataset
 
-The code for this step can
+This step will turn the full dataset, which is a .csv file, into a list of Python dictionaries.
 
+Prerequisites: You must have a recent (as of 2024) Python version installed (for the exact syntax I used to work, Python 3.12 is the only version I'm certain won't give you trouble; otherwise, you risk getting error messages resulting from previous or later syntax changes).
 
+Open a terminal and change into the repository:
+
+```
+$ cd PoeticMetaphorAnalysis
+```
+
+And then into the All-Code folder where, as the name sugggests, all of my code is located:
+
+```
+/PoeticMetaphorAnalysis$ cd All-Code
+```
+
+From there, you can run the Python program import-data-as-dictlist.py:
+
+```
+/PoeticMetaphorAnalysis/All-Code$ python3 import-data-as-dictlist.py
+```
+
+Alternatively, you can copy the code for this step, titled [import-data-as-dictlist.py](https://github.com/paigetomkins/PoeticMetaphorAnalysis/blob/main/All-Code/import-data-as-dictlist.py), under the All-Code folder of the repository. By clicking the Copy button (located on the left of the Download button pictured in the previous step), you have created a copy of the code that can then be pasted into Emacs or a similar text editor and run in the terminal.
+
+### 4. 
 
 
 ## Working research question: 
