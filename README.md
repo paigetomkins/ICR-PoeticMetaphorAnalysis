@@ -15,7 +15,7 @@ and press Enter. You should now have a local clone of this repository.
 The full dataset for my project can be found in this repository under "fulldataset.csv." Upon opening that file, there should be an option to download the raw file if you click on the arrow button on the right-hand side as seen below.
 
 
-![File Picture](DownloadRawFile.png)
+![File Picture](Screenshots/DownloadRawFile.png)
 
 The file is about 590 kBs; ensure that you have the space available to complete the download.
 
@@ -57,11 +57,13 @@ If you followed the above steps correctly, you should be in the All-Code folder 
 /PoeticMetaphorAnalysis/All-Code$ open exploratory-data-analysis.py
 ```
 
-#### Important: You need to edit the file before running it in order to specify the unique path taken by your computer to access the dataset file. The above command will simply open the file in a generic text editor, but if you want to open it in Emacs or something similar, that also works.
+#### Important: You need to edit the file before running it in order to specify the unique path taken by your computer to access the dataset file. 
+
+The above command will simply open the file in a generic text editor, but if you want to open it in Emacs or something similar, that also works.
 
 The path to the dataset file is specified in Line 6:
 
-[path to dataset photo](PathToDatasetFile.png)
+[path to dataset photo](Screenshots/PathToDatasetFile.png)
 
 After changing that line to match your computer's path to opening the dataset file, you can save the file and then run the code in the All-Code folder of the repo:
 
