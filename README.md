@@ -6,14 +6,27 @@
 
 In your terminal, type or copy-paste:
 ```
-git clone https://github.com/paigetomkins/ICR-PoeticMetaphorAnalysis.git
+git clone https://github.com/paigetomkins/PoeticMetaphorAnalysis.git
 ```
 and press Enter. You should now have a local clone of this repository.
+
+### 2. Importing the Dataset
+
+The full dataset for my project can be found in this repository under "fulldataset.csv." Upon opening that file, there should be an option to download the raw file if you click on the arrow button on the right-hand side as seen below.
+![File Picture](DownloadRawFile.png)
+The file is about 590 kBs; ensure that you have the space available to complete the download.
+
+If, for whatever reason, these steps do not work for you, you can find the original dataset at [https://www.kaggle.com/datasets/ultrajack/modern-renaissance-poetry/data](https://www.kaggle.com/datasets/ultrajack/modern-renaissance-poetry/data). However, please note that it may have been altered and thus prevent you from getting the same results as me. 
+
+### 3. Arranging the Dataset
+
+The code for this step can
+
 
 
 
 ## Working research question: 
-Between Old English and modern poetry, in what ways has the use of metaphor in poetry changed over time, and how can these changes be quantified and modeled by a computer program?
+Between Renaissance and modern poetry, in what ways has the use of metaphor in poetry changed over time, and how can these changes be quantified and modeled by a computer program?
 
 ## "Abstract":
 The current goal of my project is to plot the use of metaphor in poetry using a combination of rule-based and statistical machine-learning models in order to analyze the differences in "metaphoricity" between Old English and modern poetry. Unlike similar projects that focused on the use of computational linguistics in poetry as a means of interpretation, my project aims to use computer models to analyze the evolution of poetic style without regards to poetic understanding. By combining various methods of semantic extraction (e.g., parsing, tagging, etc.) with more advanced machine learning techniques like word embedding and cosine similarity, I hope to model the changes in poetic metaphor use across time.
