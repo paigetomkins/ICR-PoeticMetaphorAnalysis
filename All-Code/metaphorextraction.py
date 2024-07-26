@@ -1,24 +1,38 @@
 import spacy
 import textacy
+import pandas as pd
+import numpy as np
+import matplotlib.pylab as plt
 
-with open("/home/paige-tomkins/Downloads/archive(2)/all.txt", "r") as f:
-    text = f.read().replace("\n\n", " ") #allows smaller spacy model to better separate sentences
-    #chapters = text.split("CHAPTER ")[1:]
+def extract():
     
-  
-#chapter1 = chapters[0]
+    nlp = spacy.load("en_core_web_sm")
 
-nlp = spacy.load("en_core_web_lg")
+    #doc = nlp(text)
 
-doc = nlp(text)
-sentences = list(doc.sents)
-sentence = (sentences[2])
+    patterns = [[{"POS": "NOUN"}, {"POS": "VERB"}, {"POS": "NOUN"}], [{"POS": "NOUN"}, {"POS": "VERB"}, {"POS": "DEP"}, {"POS": "NOUN"}], [{"POS": "ADJ"}, {"POS": "NOUN"}]]
+    
+    metaphorical_phrases = list(textacy.extract.matches.token_matches(row[1], patterns=patterns))
+    return(metaphorical_phrases)
 
-patterns = [[{"POS": "NOUN"}, {"POS": "VERB"}, {"POS": "NOUN"}], [{"POS": "NOUN"}, {"POS": "VERB"}, {"POS": "DEP"}, {"POS": "NOUN"}], [{"POS": "ADJ"}, {"POS": "NOUN"}]]
+def main():
+    
+    df = pd.read_csv('../fulldataset.csv')
 
-verb_phrases = textacy.extract.matches.token_matches(doc, patterns=patterns)
+    rows = df.head(2)
+    print(rows)
 
-for verb_phrase in verb_phrases:
-    print (verb_phrase)
+    newdf = df.copy()
 
+    newdf['metaphors'] = np.nan
+
+    for i, row in newdf.iterrows():
+        metaphor = newdf['content'].apply(extract)
+        newdf[i].fillna(metaphor)
+
+    results = newdf.loc['metaphors']
+    print(results)
+        
+        
+main()
 

@@ -1,5 +1,7 @@
 # Moment, Meaning, and Metaphor: A computational comparison of metaphor use and semantic evolution between modern and Renaissance English poetry across the themes of love, nature, and mythology
 
+<div style="text-align: justify">
+
 ## Installing and Implementing my Code
 
 ### 1. Setting up the repository
@@ -47,7 +49,7 @@ python3 import-data-as-dictlist.py
 
 Alternatively, you can copy the code for this step, titled [import-data-as-dictlist.py](https://github.com/paigetomkins/PoeticMetaphorAnalysis/blob/main/All-Code/import-data-as-dictlist.py), under the All-Code folder of the repository. By clicking the Copy button (located on the left of the Download button pictured in the previous step), you have created a copy of the code that can then be pasted into Emacs or a similar text editor and run in the terminal under the All-Code section of the repo.
 
-### 4. Run Exploratory Data Analysis on the File
+### 4. Running Exploratory Data Analysis on the File
 
 This step will allow you to run some checks on the dataset to ensure its reliability and functionality, and also generate some graphs to visualize the various distributions present in the data.
 
@@ -61,7 +63,7 @@ This should print out some basic statistics related to the dataset (e.g., number
 
 ### 5. Metaphor Extraction
 
-This code is a work in progess. This step will be updated immediately after the code is functional and pushed to the repository.
+This code is a work in progess. This step will be updated immediately after the code is functional (expected to be on the night of 07/25 or early the following morning) and pushed to the repository.
 
 ## Working research question: 
 Between Renaissance and modern poetry, in what ways has the use of metaphor in poetry changed over time, and how can these changes be quantified and modeled by a computer program?
@@ -156,3 +158,5 @@ Zayed et al (2020). Figure me out: A gold standard dataset for metaphor interpre
 Zou et al (2013). Bilingual word embeddings for phrase-based machine translation. Not very relevant.based on the context surrounding the word
 
 *I also used various articles and blog posts to quickly understand certain concepts, but most of them are not credible enough to cite and were not read in full.
+
+</div>
