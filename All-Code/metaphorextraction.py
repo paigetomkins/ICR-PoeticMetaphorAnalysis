@@ -4,35 +4,26 @@ import pandas as pd
 import numpy as np
 import matplotlib.pylab as plt
 
-def extract():
-    
+#Extracting the metaphors
+newdf = pd.read_csv('../fulldataset.csv')
+newdf['metaphors'] = None
+for i, row in newdf.iterrows():
     nlp = spacy.load("en_core_web_sm")
-
-    #doc = nlp(text)
-
+    poem = row['content']
+    processed = nlp(poem)
     patterns = [[{"POS": "NOUN"}, {"POS": "VERB"}, {"POS": "NOUN"}], [{"POS": "NOUN"}, {"POS": "VERB"}, {"POS": "DEP"}, {"POS": "NOUN"}], [{"POS": "ADJ"}, {"POS": "NOUN"}]]
-    
-    metaphorical_phrases = list(textacy.extract.matches.token_matches(row[1], patterns=patterns))
-    return(metaphorical_phrases)
+    metaphorical_phrases = list(textacy.extract.matches.token_matches(processed, patterns=patterns))
+    newdf.at[i, 'metaphors'] = metaphorical_phrases
+results = newdf.loc[:, 'metaphors']
+print(results)
 
-def main():
-    
-    df = pd.read_csv('../fulldataset.csv')
+#Extracting the number of metaphors present per row
+newdf['number of metaphors'] = None
+for i, row in newdf.iterrows():
+    num_metaphors = len(newdf.loc[i, 'metaphors'])
+    newdf.at[i, 'number of metaphors'] = num_metaphors
+amount = newdf.loc[:, 'number of metaphors']
+print(amount)
 
-    rows = df.head(2)
-    print(rows)
 
-    newdf = df.copy()
-
-    newdf['metaphors'] = np.nan
-
-    for i, row in newdf.iterrows():
-        metaphor = newdf['content'].apply(extract)
-        newdf[i].fillna(metaphor)
-
-    results = newdf.loc['metaphors']
-    print(results)
-        
-        
-main()
 
