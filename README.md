@@ -23,7 +23,11 @@ The file is about 590 kBs; ensure that you have the space available to complete 
 
 If, for whatever reason, these steps do not work for you, you can find the original dataset at [https://www.kaggle.com/datasets/ultrajack/modern-renaissance-poetry/data](https://www.kaggle.com/datasets/ultrajack/modern-renaissance-poetry/data). However, please note that it may have been altered and thus prevent you from getting the same results as me. 
 
-### 3. Arranging the Dataset
+###3. Necessary Libraries
+
+
+
+### 4. Arranging the Dataset
 
 This step will turn the full dataset, which is a .csv file, into a list of Python dictionaries.
 
@@ -49,7 +53,7 @@ python3 import-data-as-dictlist.py
 
 Alternatively, you can copy the code for this step, titled [import-data-as-dictlist.py](https://github.com/paigetomkins/PoeticMetaphorAnalysis/blob/main/All-Code/import-data-as-dictlist.py), under the All-Code folder of the repository. By clicking the Copy button (located on the left of the Download button pictured in the previous step), you have created a copy of the code that can then be pasted into Emacs or a similar text editor and run in the terminal under the All-Code section of the repo.
 
-### 4. Running Exploratory Data Analysis on the File
+### 5. Running Exploratory Data Analysis on the File
 
 This step will allow you to run some checks on the dataset to ensure its reliability and functionality, and also generate some graphs to visualize the various distributions present in the data.
 
@@ -61,9 +65,16 @@ python3 exploratory-data-analysis.py
 
 This should print out some basic statistics related to the dataset (e.g., number of missing values, number of duplicate values, etc.) and offer you three graphs: One visualizing the authorship distribution, one for the thematic distribution, and one for the time period distribution. If the graphs look different than mine (featured below in Part 1 of the Methodology section), ensure that you have downloaded the same dataset as me and that you did not edit other lines of code in the file.
 
-### 5. Metaphor Extraction
+### 6. Metaphor Extraction
 
-This code is a work in progess. This step will be updated immediately after the code is functional (expected to be on the night of 07/25 or early the following morning) and pushed to the repository.
+This step will take the preexisting dataset, extract the metaphors from the poetic content, and return those metaphors (as well as the number of detected metaphors present per poem) in a new column titled "metaphors." To execute the program, simply type:
+
+```
+python3 metaphorextraction.py
+```
+
+And wait. Please note that given the size of the corpus and the task at hand, it can often take a few minutes for the program to run. The output will be the new dataset, complete with the additional two columns (the self-explanatory "metaphors" and "number of metaphors"). 
+
 
 ## Working research question: 
 Between Renaissance and modern poetry, in what ways has the use of metaphor in poetry changed over time, and how can these changes be quantified and modeled by a computer program?
