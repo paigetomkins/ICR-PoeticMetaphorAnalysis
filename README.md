@@ -27,60 +27,60 @@ If, for whatever reason, these steps do not work for you, you can find the origi
 
 The following are all of the libraries required to execute my code. While not all of them are required to run every program, I recommend that you install them all upfront. (To see the versions of each library that I used, see the "Methods" section of my paper down below.)
 
-####Python
+#### Python
 
 For Python specifically, I recommend you find an online guide on installation that matches your individual operating system, newest version, and requirements (such as the one found [here](https://realpython.com/installing-python/)).
 
-####pip
+#### pip
 
 Or a similar package installer.
 ```
 sudo apt install pip
 ```
 
-####numpy
+#### numpy
 
 ```
 pip install numpy
 ```
 
-####scipy
+#### scipy
 
 ```
 pip install scipy
 ```
 
-####sklearn
+#### sklearn
 
 ```
 pip install sklearn
 ```
 
-####matplotlib
+#### matplotlib
 
 ```
 pip install matplotlib
 ```
 
-####spacy
+#### spacy
 
 ```
 pip install spacy
 ```
 
-####textacy
+#### textacy
 
 ```
 pip install textacy
 ```
 
-####pandas 
+#### pandas 
 
 ```
 pip install pandas
 ```
 
-####regex
+#### regex
 
 ```
 pip install regex
@@ -167,7 +167,7 @@ For the purposes of my research, a metaphor can be operationally defined as a fi
 Previous models have attempted to identify metaphor not only through vectors and machine learning, but also through methods like visual representation, text annotation, and more. Shutova et al (2016), for instance, incorporated visual information into semantic representation in order to enhance their model's metaphor identification accuracy; Kesarwani (2018), on the other hand, added both manual annotation and statistical machine learning models into their methodology in order to incorporate sophisticated metaphor identification capabilities into their model. Herbelot (2014) did something similar through the use of distributional semantics in poetic analysis. My project is essentially a simplified version of such previous related works, removing visual information, statistical machine learning, manual corpus annotation, and distributional semantics in favor of a simpler approach. Though my methods may not be as elaborate as those of other researchers, I believe that my results demonstrate the promise of even simple computer models in better mapping and understanding the intricacies of human language.
 
 
-## "Methodology":
+## Methodology:
 ### 1. Dataset Selection
 
 For my dataset, I have selected the Kaggle open-source dataset "Poems from poetryfoundation.org," which is a collection of poems from Poetry Foundation assembled by the user ultra-jack and licensed under the CC0 Public Domain license. The collection is sorted based on general time period ("Renaissance" or "Modern"), author, and theme ("Love," "Nature," or "Mythology and Folklore"). There are a total of 509 poems from 462 authors and a relatively even distribution of time period. There are only two unknown values (both for author) in the entire dataset, but there were 64 duplicate poems. In order to minimize the effects of this, I am using a copy of the dataset with the duplicates removed (although the poems that contain an unknown author remain, since only two existed and poetic content, theme, and era were all preserved). Since the poems were collected from Poetry Foundation, it can be assumed that they also cover a wide range of regions and languages, though all of the poems are offered in English and little information is given regarding language or region. The dataset contains no linguistic annotation and is downloaded in the form of a single .csv file containing all of the poems. I have selected this dataset over similar Kaggle or Project Gutenberg corpora due to its organization of multiple categories, few missing values, simple format, and wide authorship distribution, all of which enable me to easily sort my data and have greater faith in my results.
