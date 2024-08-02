@@ -23,7 +23,7 @@ The file is about 590 kBs; ensure that you have the space available to complete 
 
 If, for whatever reason, these steps do not work for you, you can find the original dataset at [https://www.kaggle.com/datasets/ultrajack/modern-renaissance-poetry/data](https://www.kaggle.com/datasets/ultrajack/modern-renaissance-poetry/data). However, please note that it may have been altered and thus prevent you from getting the same results as me. 
 
-###3. Installing Necessary Libraries
+### 3. Installing Necessary Libraries
 
 The following are all of the libraries required to execute my code. While not all of them are required to run every program, I recommend that you install them all upfront. (To see the versions of each library that I used, see the "Methods" section of my paper down below.)
 
